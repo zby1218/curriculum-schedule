@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scaleable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="reset.css">
-    <title>curriculum schedule</title>
-</head>
-<body class="body">
+function addNewWeek(temp){
 
-    <div class="mainControl">
-        
-    
+    let body = document.getElementsByTagName('body')[0];
+    console.log(body);
+    body.innerHTML += `
+    <div class="${temp}">
     <div class="everyWeek">
 
-    
+        
     <div class="modify">
         <div class="top"></div>
         <div class="bottom">
@@ -37,7 +28,7 @@
                 <div class="show"></div> -->
             </div>
             <ul class="time-ul">
-               
+            
                 <li class="time-li">
                     <div class="time-wrapper">
                         <div class="number">1</div>
@@ -73,7 +64,7 @@
                             <div class="weekday">周二</div class="weekday">
                             <div class="today">1-28</div class="today">
                         </div>
-                       
+                    
                     </li>
                     <li class="date-li">
                         <div class="wrapper">
@@ -238,11 +229,28 @@
         </div>
         
     </div>
-</div>
-</div>
+    </div>
+    </div>
+    `
+}
+addNewWeek('rightWeek');
+addNewWeek('leftWeek');
+window.nowWeek = [];
+function RightWeekSet(){
+    
+    findWeek(5,7);
+    console.log(3466232);
+    
+}
+RightWeekSet();
+let body = document.getElementsByTagName('body')[0];
+body.scrollTo(100,0);
+setTimeout(function(){
+    
+    
+    body.scrollTo(100,0);
 
-    <script src="src/index.js"></script>
-    <script src="src/nextWeek.js"></script>
-    <script src="src/function.js"></script>
-</body>
-</html>
+},0);
+
+
+
